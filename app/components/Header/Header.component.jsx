@@ -9,9 +9,9 @@ const Header = ({ isDarkTheme }) => {
         <Image
           src="/profile_image.png"
           alt=""
-          width={40}
-          height={40}
-          className="rounded-full"
+          width={80}
+          height={80}
+          className="rounded-full object-cover"
         />
       </div>
       <h3 className="flex items-center gap-2 mb-3 text-xl md:text-2xl font-Ovo">

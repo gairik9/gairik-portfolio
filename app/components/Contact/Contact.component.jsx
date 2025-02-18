@@ -70,16 +70,23 @@ const Contact = ({ isDarkTheme }) => {
           }`}
         />
 
-        <button
-          type="submit"
-          className={`px-10 py-3 border border-white rounded-full bg-black/80 hover:bg-black duration-500 text-white flex items-center gap-2 mx-auto ${
-            isDarkTheme
-              ? "border-none bg-white text-black hover:bg-white/80"
-              : ""
-          }`}
-        >
-          Send <MoveRight />
-        </button>
+        {isDarkTheme ? (
+          <button
+            type="submit"
+            className={`px-10 py-3 border border-none bg-white text-black hover:bg-white/80 duration-500 text-white flex items-center gap-2 mx-auto ${
+              isDarkTheme ? "" : ""
+            }`}
+          >
+            Send <MoveRight />
+          </button>
+        ) : (
+          <button
+            type="submit"
+            className={`px-10 py-3 border border-white rounded-full bg-black/80 hover:bg-black duration-500 text-white flex items-center gap-2 mx-auto`}
+          >
+            Send <MoveRight />
+          </button>
+        )}
 
         <p className="mt-4 text-center">{result}</p>
       </form>

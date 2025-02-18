@@ -73,7 +73,7 @@ const Contact = ({ isDarkTheme }) => {
         {isDarkTheme ? (
           <button
             type="submit"
-            className={`px-10 py-3 border border-none rounded-full bg-white text-black hover:bg-white/80 duration-500  flex items-center gap-2 mx-auto`}
+            className={`px-10 py-3 border border-white rounded-full bg-white text-black flex items-center gap-2 duration-500 mx-auto`}
           >
             Send <MoveRight />
           </button>

@@ -29,8 +29,8 @@ const Header = ({ isDarkTheme }) => {
           href="#contact"
           className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 ${
             isDarkTheme
-              ? "text-black bg-white hover:bg-white hover:text-black"
-              : "hover:bg-black hover:text-white"
+              ? "text-black bg-white"
+              : ""
           }`}
         >
           Contact Me <MoveRight />

@@ -12,7 +12,7 @@ const About = ({ isDarkTheme }) => {
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
         <div className="w-64 sm:w-80 rounded-3xl max-w-none">
           <Image
-            src="/profile_image.png"
+            src="/about_bg.png"
             alt="profile_picture"
             width={1000}
             height={1000}

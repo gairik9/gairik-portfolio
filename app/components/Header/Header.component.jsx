@@ -25,14 +25,21 @@ const Header = ({ isDarkTheme }) => {
         design. Transforming ideas into interactive, modern web solutions.
       </p>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
-        <a
+        {isDarkTheme ? (
+          <a
           href="#contact"
-          className={`px-10 py-3 border border-white rounded-full  flex items-center gap-2 ${
-            isDarkTheme ? "text-black bg-white" : "bg-black text-white"
-          }`}
+          className={`px-10 py-3 border border-white rounded-full bg-white text-black flex items-center gap-2`}
         >
           Contact Me <MoveRight />
         </a>
+        ) : (
+          <a
+            href="#contact"
+            className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2`}
+          >
+            Contact Me <MoveRight />
+          </a>
+        )}
         <a
           href="/resume.pdf"
           download

@@ -15,8 +15,8 @@ const Header = ({ isDarkTheme }) => {
         <Image
           src="/resume_image.jpg"
           alt=""
-          width={100}
-          height={100}
+          width={70}
+          height={70}
           className="rounded-full object-cover"
         />
       </motion.div>

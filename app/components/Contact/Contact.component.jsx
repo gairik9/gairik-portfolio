@@ -1,5 +1,6 @@
 import { MoveRight } from "lucide-react";
 import React, { useState } from "react";
+import { motion } from "motion/react";
 
 const Contact = ({ isDarkTheme }) => {
   const [result, setResult] = useState("");
@@ -27,21 +28,52 @@ const Contact = ({ isDarkTheme }) => {
     }
   };
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
       id="contact"
       className="w-full px-[12%] py-10 scroll-mt-20 bg-[url('/contact_bg.png')] bg-[length:90%_auto] dark:bg-none bg-center bg-no-repeat"
     >
-      <h4 className="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
-      <h2 className="text-center text-5xl font-Ovo">Get in touch</h2>
+      <motion.h4
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="text-center mb-2 text-lg font-Ovo"
+      >
+        Connect with me
+      </motion.h4>
+      <motion.h2
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        className="text-center text-5xl font-Ovo"
+      >
+        Get in touch
+      </motion.h2>
 
-      <p className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+        className="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo"
+      >
         I'd love to hear from you! If you have any questions, comments or
         feedback, please use the form below.
-      </p>
+      </motion.p>
 
-      <form onSubmit={onSubmit} className="max-w-2xl mx-auto">
+      <motion.form
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.9, duration: 0.5 }}
+        onSubmit={onSubmit}
+        className="max-w-2xl mx-auto"
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 mb-8">
-          <input
+          <motion.input
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.1, delay: 0.6 }}
             type="text"
             name="name"
             placeholder="Enter your name"
@@ -50,7 +82,10 @@ const Contact = ({ isDarkTheme }) => {
               isDarkTheme ? "text-black" : ""
             }`}
           />
-          <input
+          <motion.input
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1.2, delay: 0.6 }}
             type="email"
             name="email"
             placeholder="Enter your email"
@@ -60,7 +95,10 @@ const Contact = ({ isDarkTheme }) => {
             }`}
           />
         </div>
-        <textarea
+        <motion.textarea
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.3, delay: 0.6 }}
           name="message"
           placeholder="Enter your message"
           rows={6}
@@ -71,24 +109,28 @@ const Contact = ({ isDarkTheme }) => {
         />
 
         {isDarkTheme ? (
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
             type="submit"
             className={`px-10 py-3 border border-white rounded-full bg-white text-black flex items-center gap-2 duration-500 mx-auto`}
           >
             Send <MoveRight />
-          </button>
+          </motion.button>
         ) : (
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
             type="submit"
             className={`px-10 py-3 border border-white rounded-full bg-black/80 hover:bg-black duration-500 text-white flex items-center gap-2 mx-auto`}
           >
             Send <MoveRight />
-          </button>
+          </motion.button>
         )}
 
         <p className="mt-4 text-center">{result}</p>
-      </form>
-    </div>
+      </motion.form>
+    </motion.div>
   );
 };
 

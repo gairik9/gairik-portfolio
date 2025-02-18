@@ -10,13 +10,13 @@ const Header = ({ isDarkTheme }) => {
         initial={{ scale: 0 }}
         whileInView={{ scale: 1 }}
         transition={{ duration: 0.8, type: "spring", stiffness: 100 }}
-        className="flex items-center justify-center gap-2"
+        className="flex items-center justify-center gap-2 pt-4"
       >
         <Image
           src="/resume_image.jpg"
           alt=""
-          width={70}
-          height={70}
+          width={60}
+          height={60}
           className="rounded-full object-cover"
         />
       </motion.div>

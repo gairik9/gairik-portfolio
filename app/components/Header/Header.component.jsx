@@ -27,10 +27,8 @@ const Header = ({ isDarkTheme }) => {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4">
         <a
           href="#contact"
-          className={`px-10 py-3 border border-white rounded-full bg-black text-white flex items-center gap-2 ${
-            isDarkTheme
-              ? "text-black bg-white"
-              : ""
+          className={`px-10 py-3 border border-white rounded-full  flex items-center gap-2 ${
+            isDarkTheme ? "text-black bg-white" : "bg-black text-white"
           }`}
         >
           Contact Me <MoveRight />
